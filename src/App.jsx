@@ -63,15 +63,15 @@
 // export default App;
 
 import React from 'react';
-import HomePage from './HomePage';
-import { ProductProvider } from './UserContext';
+import ContextProvider from './ContextProvider';
+import { ProductProvider } from './Context';
 
 export default function App() {
   const user = { name: 'Marius', value: true };
 
   return (
     <ProductProvider value={user}>
-      <HomePage />
+      <ContextProvider />
     </ProductProvider>
   );
 }
