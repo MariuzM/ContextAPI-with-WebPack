@@ -7,3 +7,4 @@ export default class App extends Component {
   }
 }
 console.log('test');
+console.log('test');
