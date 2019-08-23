@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import Home from './context/PassingFromContext';
+import PassingFromContext from './context/PassingFromContext';
 
 export default class App extends Component {
   render() {
-    return <Home />;
+    return <PassingFromContext />;
   }
 }

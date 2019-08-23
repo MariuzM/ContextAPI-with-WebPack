@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-
+import { data } from './dataDb';
 const ProductContext = React.createContext();
-//Provider
-//Consumer
+
+console.log(data);
+
 class ProductProvider extends Component {
   render() {
     return (
