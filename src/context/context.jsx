@@ -17,10 +17,6 @@ class ProductProvider extends Component {
     });
   };
 
-  testas = () => {
-    console.log(state);
-  };
-
   render() {
     return (
       <ProductContext.Provider value="hello from context">
