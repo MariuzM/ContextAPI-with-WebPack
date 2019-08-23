@@ -6,5 +6,3 @@ export default class App extends Component {
     return <PassingFromContext />;
   }
 }
-console.log('test');
-console.log('test');
