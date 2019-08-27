@@ -1,77 +1,28 @@
-// // import React, { Component } from 'react';
-// // import PassingFromContext from './context/PassingFromContext';
-// // import Prod from './context/context';
-
-// // export default class App extends Component {
-// //   render() {
-// //     return (
-// //       <div>
-// //         <Prod>Test</Prod>
-// //         {/* <PassingFromContext /> */}
-// //       </div>
-// //     );
-// //   }
-// // }
-
-// import React, { useContext, Component } from 'react';
-
-// const UserContext = React.createContext();
-// const ProductProvider = UserContext.Provider;
-// const ProductConsumer = UserContext.Consumer;
-
-// function App() {
-//   const user = {
-//     name: 'Tania',
-//     loggedIn: true
-//   };
-
-//   // const user2 = useContext(UserContext);
-//   // console.log(user2);
-
-//   return (
-//     <div>
-//       <HomePage></HomePage>
-//       <ProductProvider value={user}>Test</ProductProvider>
-//       <ProductConsumer>
-//         {props => {
-//           return <div>{props}</div>;
-//         }}
-//       </ProductConsumer>
-//     </div>
-//   );
-// }
-
-// class HomePage extends Component {
-//   static contextType = UserContext;
-
-//   componentDidMount() {
-//     const user = this.context;
-//     console.log(user); // { name: 'Tania', loggedIn: true }
-//   }
-
-//   render() {
-//     return (
-//       <ProductConsumer>
-//         {props => {
-//           return <div>{props.name}</div>;
-//         }}
-//       </ProductConsumer>
-//     );
-//   }
-// }
-
-// export default App;
-
 import React from 'react';
-import ContextProvider from './ContextProvider';
-import { ProductProvider } from './Context';
+import { ProductProvider } from './Context/Context';
+import ContextConsumerClass from './Context/ContextConsumer - Class';
+import ContextConsumerFunction from './Context/ContextConsumer - Function';
 
 export default function App() {
-  const user = { name: 'Marius', value: true };
+  const classVal = {
+    name: 'This is a Class Context',
+    value: true
+  };
+
+  const functionVal = {
+    name: 'This is a Function Context',
+    value: true
+  };
 
   return (
-    <ProductProvider value={user}>
-      <ContextProvider />
-    </ProductProvider>
+    <>
+      <ProductProvider value={classVal}>
+        <ContextConsumerClass />
+      </ProductProvider>
+      <br></br>
+      <ProductProvider value={functionVal}>
+        <ContextConsumerFunction propFromContextConsumerFunction={functionVal.name} />
+      </ProductProvider>
+    </>
   );
 }
