@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, useContext } from 'react';
 import { _createContext } from './_context';
 
 // ===============================================
@@ -62,28 +62,51 @@ import { _createContext } from './_context';
 // ===============================================
 // Converted to function base
 // ===============================================
+// export default function Navbar() {
+//   return (
+//     <_createContext.Consumer>
+//       {value => {
+//         const { isLightTheme, light, dark } = value;
+//         const theme = isLightTheme ? light : dark;
+//         return (
+//           <nav
+//             style={{
+//               background: theme.ui,
+//               color: theme.syntax
+//             }}
+//           >
+//             <h1>Context App</h1>
+//             <ul>
+//               <li>Home</li>
+//               <li>About</li>
+//               <li>Contact</li>
+//             </ul>
+//           </nav>
+//         );
+//       }}
+//     </_createContext.Consumer>
+//   );
+// }
+
+// ===============================================
+// Function + Hooks
+// ===============================================
 export default function Navbar() {
+  const { isLightTheme, light, dark } = useContext(_createContext);
+  const theme = isLightTheme ? light : dark;
   return (
-    <_createContext.Consumer>
-      {value => {
-        const { isLightTheme, light, dark } = value;
-        const theme = isLightTheme ? light : dark;
-        return (
-          <nav
-            style={{
-              background: theme.ui,
-              color: theme.syntax
-            }}
-          >
-            <h1>Context App</h1>
-            <ul>
-              <li>Home</li>
-              <li>About</li>
-              <li>Contact</li>
-            </ul>
-          </nav>
-        );
+    <nav
+      style={{
+        background: theme.ui,
+        color: theme.syntax
       }}
-    </_createContext.Consumer>
+    >
+      <h1>Context App</h1>
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
   );
 }

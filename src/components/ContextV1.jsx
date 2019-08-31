@@ -19,7 +19,6 @@ export default function ContextV1() {
       <ProductProvider value={classVal}>
         <ContextConsumerClass />
       </ProductProvider>
-      <br></br>
       <ProductProvider value={functionVal}>
         <ContextConsumerFunction propFromContextConsumerFunction={functionVal.name} />
       </ProductProvider>
