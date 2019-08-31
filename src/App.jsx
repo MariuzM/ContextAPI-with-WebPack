@@ -1,28 +1,14 @@
 import React from 'react';
-import { ProductProvider } from './Context/Context';
-import ContextConsumerClass from './Context/ContextConsumer - Class';
-import ContextConsumerFunction from './Context/ContextConsumer - Function';
+import ContextV1 from './components/ContextV1';
+import ContextV2 from './components/ContextV2';
+
+import './App.css';
 
 export default function App() {
-  const classVal = {
-    name: 'This is a Class Context',
-    value: true
-  };
-
-  const functionVal = {
-    name: 'This is a Function Context',
-    value: true
-  };
-
   return (
     <>
-      <ProductProvider value={classVal}>
-        <ContextConsumerClass />
-      </ProductProvider>
-      <br></br>
-      <ProductProvider value={functionVal}>
-        <ContextConsumerFunction propFromContextConsumerFunction={functionVal.name} />
-      </ProductProvider>
+      <ContextV1 />
+      <ContextV2 />
     </>
   );
 }
