@@ -31,16 +31,16 @@ import Button from '@material-ui/core/Button';
 // Converted to Arrow base
 // ===============================================
 // const ToggleButton = () => {
-// 	return (
+//   return (
 //     <_createContext.Consumer>
 //       {value => {
 //         const { toggleButton } = value;
 //         return <Button onClick={toggleButton}>Toggle Theme</Button>;
 //       }}
 //     </_createContext.Consumer>
-// 	)
-// }
-// export default ToggleButton
+//   );
+// };
+// export default ToggleButton;
 
 // ===============================================
 // Converted to Arrow V2 base

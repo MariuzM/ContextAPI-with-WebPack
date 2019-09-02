@@ -28,14 +28,15 @@ import { _createContext } from './_context';
 // Function + Hooks
 // ===============================================
 export default function BookList() {
-  const { isLightTheme, light, dark } = useContext(_createContext);
+  const { isLightTheme, light, dark, transition } = useContext(_createContext);
   const theme = isLightTheme ? light : dark;
   return (
     <div
       className="book-list"
       style={{
         background: theme.bg,
-        color: theme.syntax
+        color: theme.syntax,
+        transition
       }}
     >
       <ul>

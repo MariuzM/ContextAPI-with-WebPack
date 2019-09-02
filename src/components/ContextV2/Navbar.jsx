@@ -92,13 +92,14 @@ import { _createContext } from './_context';
 // Function + Hooks
 // ===============================================
 export default function Navbar() {
-  const { isLightTheme, light, dark } = useContext(_createContext);
+  const { isLightTheme, light, dark, transition } = useContext(_createContext);
   const theme = isLightTheme ? light : dark;
   return (
     <nav
       style={{
         background: theme.ui,
-        color: theme.syntax
+        color: theme.syntax,
+        transition
       }}
     >
       <h1>Context App</h1>
