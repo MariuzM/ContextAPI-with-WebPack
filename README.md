@@ -8,7 +8,7 @@ Uploading various uses of Context this is just for personal use to have this at 
 npm install
 ```
 
-or short hand
+or shorthand
 
 ```bash
 npm i
