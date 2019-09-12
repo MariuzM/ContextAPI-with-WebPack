@@ -1,6 +1,6 @@
-import React, { Component, useContext } from 'react';
-import { _createContext } from './_context';
-import Button from '@material-ui/core/Button';
+import React, { Component, useContext } from 'react'
+import { _createContext } from './_context'
+import Button from '@material-ui/core/Button'
 
 // ===============================================
 // Class base
@@ -59,8 +59,8 @@ import Button from '@material-ui/core/Button';
 // Function + Hooks
 // ===============================================
 export default function ToggleButton() {
-  const { toggleButton } = useContext(_createContext);
-  return <Button onClick={toggleButton}>Toggle Theme</Button>;
+  const { toggleButton } = useContext(_createContext)
+  return <Button onClick={toggleButton}>Toggle Theme</Button>
 }
 
 // ===============================================

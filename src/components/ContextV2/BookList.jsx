@@ -1,5 +1,5 @@
-import React, { Component, useContext } from 'react';
-import { _createContext } from './_context';
+import React, { Component, useContext } from 'react'
+import { _createContext } from './_context'
 
 // export default class BookList extends Component {
 //   static contextType = _createContext;
@@ -28,8 +28,8 @@ import { _createContext } from './_context';
 // Function + Hooks
 // ===============================================
 export default function BookList() {
-  const { isLightTheme, light, dark, transition } = useContext(_createContext);
-  const theme = isLightTheme ? light : dark;
+  const { isLightTheme, light, dark, transition } = useContext(_createContext)
+  const theme = isLightTheme ? light : dark
   return (
     <div
       className="book-list"
@@ -45,5 +45,5 @@ export default function BookList() {
         <li style={{ background: theme.ui }}>3rd Chapter</li>
       </ul>
     </div>
-  );
+  )
 }

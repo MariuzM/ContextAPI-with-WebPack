@@ -1,5 +1,5 @@
-import React, { Component, useContext } from 'react';
-import { _createContext } from './_context';
+import React, { Component, useContext } from 'react'
+import { _createContext } from './_context'
 
 // ===============================================
 // Class base
@@ -92,8 +92,8 @@ import { _createContext } from './_context';
 // Function + Hooks
 // ===============================================
 export default function Navbar() {
-  const { isLightTheme, light, dark, transition } = useContext(_createContext);
-  const theme = isLightTheme ? light : dark;
+  const { isLightTheme, light, dark, transition } = useContext(_createContext)
+  const theme = isLightTheme ? light : dark
   return (
     <nav
       style={{
@@ -109,5 +109,5 @@ export default function Navbar() {
         <li>Contact</li>
       </ul>
     </nav>
-  );
+  )
 }

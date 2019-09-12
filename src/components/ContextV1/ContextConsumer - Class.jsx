@@ -1,13 +1,13 @@
-import React, { Component, useContext } from 'react';
-import UserContext from './Context';
-import { ProductConsumer } from './Context';
-import Button from '@material-ui/core/Button';
+import React, { Component, useContext } from 'react'
+import UserContext from './Context'
+import { ProductConsumer } from './Context'
+import Button from '@material-ui/core/Button'
 
 export default class ContextConsumerClass extends Component {
-  static contextType = UserContext;
+  static contextType = UserContext
   componentDidMount() {
-    const user = this.context;
-    console.log(user);
+    const user = this.context
+    console.log(user)
   }
 
   render() {
@@ -19,10 +19,10 @@ export default class ContextConsumerClass extends Component {
               <Button variant="contained" color="primary">
                 {props.name}
               </Button>
-            );
+            )
           }}
         </ProductConsumer>
       </div>
-    );
+    )
   }
 }
