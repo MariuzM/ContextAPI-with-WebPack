@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react'
 // import { useCart } from './_useContext';
-import { CartContext } from './_CountContext';
+import { CartContext } from './_CountContext'
 
 // const CartTotalItems = () => {
 //   const { cartTotal } = useCart();
@@ -17,6 +17,11 @@ import { CartContext } from './_CountContext';
 // Disabled useCart in Context
 // =========================================
 export default function CartTotalItems() {
-  const { cartTotal } = React.useContext(CartContext);
-  return <p>Total items currently in cart: {cartTotal}</p>;
+  const { cartTotal } = React.useContext(CartContext)
+  return (
+    <p>
+      Total items currently in cart:
+      {cartTotal}
+    </p>
+  )
 }

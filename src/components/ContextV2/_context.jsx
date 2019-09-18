@@ -1,6 +1,7 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-export const _createContext = React.createContext()
+export const CreateContext = React.createContext()
 
 // export class ContextProvider extends React.Component {
 //   state = {
@@ -24,13 +25,17 @@ export function ContextProvider({ children }) {
     isLightTheme: true,
     light: { syntax: '#555', ui: '#ddd', bg: '#eee' },
     dark: { syntax: '#ddd', ui: '#333', bg: '#555' },
-    transition: 'all 1s'
+    transition: 'all 1s',
   }
   const [ui, setUi] = React.useState(initialState)
   const toggleButton = () => setUi({ ...initialState, isLightTheme: !ui.isLightTheme })
   return (
-    <_createContext.Provider value={{ ...ui, toggleButton }}>
+    <CreateContext.Provider value={{ ...ui, toggleButton }}>
       {children}
-    </_createContext.Provider>
+    </CreateContext.Provider>
   )
+}
+
+ContextProvider.propTypes = {
+  children: PropTypes.node.isRequired,
 }

@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
-import UserContext from './Context'
-import { ProductConsumer } from './Context'
 import Button from '@material-ui/core/Button'
+import PropTypes from 'prop-types'
+import UserContext, { ProductConsumer } from './Context'
 
 export default function ContextConsumerFunction(propFromContextConsumerFunction) {
   console.log(propFromContextConsumerFunction)
@@ -11,6 +11,7 @@ export default function ContextConsumerFunction(propFromContextConsumerFunction)
   return (
     <ProductConsumer>
       {props => {
+        console.log(props.name)
         return (
           <Button variant="contained" color="secondary">
             {props.name}
@@ -19,4 +20,16 @@ export default function ContextConsumerFunction(propFromContextConsumerFunction)
       }}
     </ProductConsumer>
   )
+}
+
+// ContextConsumerFunction.propTypes = {
+//   name: PropTypes.node.isRequired,
+// }
+
+ContextConsumerFunction.propTypes = {
+  name: PropTypes.string,
+}
+
+ContextConsumerFunction.defaultProps = {
+  name: '',
 }

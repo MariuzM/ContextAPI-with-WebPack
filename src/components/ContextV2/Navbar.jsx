@@ -1,11 +1,11 @@
 import React, { Component, useContext } from 'react'
-import { _createContext } from './_context'
+import { CreateContext } from './_context'
 
 // ===============================================
 // Class base
 // ===============================================
 // export default class Navbar extends Component {
-//   static contextType = _createContext;
+//   static contextType = CreateContext;
 //   render() {
 //     const { isLightTheme, light, dark } = this.context;
 //     const theme = isLightTheme ? light : dark;
@@ -92,14 +92,14 @@ import { _createContext } from './_context'
 // Function + Hooks
 // ===============================================
 export default function Navbar() {
-  const { isLightTheme, light, dark, transition } = useContext(_createContext)
+  const { isLightTheme, light, dark, transition } = useContext(CreateContext)
   const theme = isLightTheme ? light : dark
   return (
     <nav
       style={{
         background: theme.ui,
         color: theme.syntax,
-        transition
+        transition,
       }}
     >
       <h1>Context App</h1>

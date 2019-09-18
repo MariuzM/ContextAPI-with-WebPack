@@ -6,12 +6,12 @@ import ContextConsumerFunction from './ContextV1/ContextConsumer - Function'
 export default function ContextV1() {
   const classVal = {
     name: 'This is a Class Context',
-    value: true
+    value: true,
   }
 
   const functionVal = {
     name: 'This is a Function Context',
-    value: true
+    value: true,
   }
 
   return (

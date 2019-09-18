@@ -1,12 +1,12 @@
 import React, { Component, useContext } from 'react'
-import { _createContext } from './_context'
 import Button from '@material-ui/core/Button'
+import { CreateContext } from './_context'
 
 // ===============================================
 // Class base
 // ===============================================
 // export default class ToggleButton extends Component {
-//   static contextType = _createContext;
+//   static contextType = CreateContext;
 //   render() {
 //     const { toggleButton } = this.context;
 //     return <Button onClick={toggleButton}>Toggle Theme</Button>;
@@ -18,12 +18,12 @@ import Button from '@material-ui/core/Button'
 // ===============================================
 // export default function ToggleButton() {
 //   return (
-//     <_createContext.Consumer>
+//     <CreateContext.Consumer>
 //       {value => {
 //         const { toggleButton } = value;
 //         return <Button onClick={toggleButton}>Toggle Theme</Button>;
 //       }}
-//     </_createContext.Consumer>
+//     </CreateContext.Consumer>
 //   );
 // }
 
@@ -32,12 +32,12 @@ import Button from '@material-ui/core/Button'
 // ===============================================
 // const ToggleButton = () => {
 //   return (
-//     <_createContext.Consumer>
+//     <CreateContext.Consumer>
 //       {value => {
 //         const { toggleButton } = value;
 //         return <Button onClick={toggleButton}>Toggle Theme</Button>;
 //       }}
-//     </_createContext.Consumer>
+//     </CreateContext.Consumer>
 //   );
 // };
 // export default ToggleButton;
@@ -46,12 +46,12 @@ import Button from '@material-ui/core/Button'
 // Converted to Arrow V2 base
 // ===============================================
 // const ToggleButton = () => (
-//   <_createContext.Consumer>
+//   <CreateContext.Consumer>
 //     {value => {
 //       const { toggleButton } = value;
 //       return <Button onClick={toggleButton}>Toggle Theme</Button>;
 //     }}
-//   </_createContext.Consumer>
+//   </CreateContext.Consumer>
 // );
 // export default ToggleButton;
 
@@ -59,7 +59,7 @@ import Button from '@material-ui/core/Button'
 // Function + Hooks
 // ===============================================
 export default function ToggleButton() {
-  const { toggleButton } = useContext(_createContext)
+  const { toggleButton } = useContext(CreateContext)
   return <Button onClick={toggleButton}>Toggle Theme</Button>
 }
 
@@ -67,7 +67,7 @@ export default function ToggleButton() {
 // Arrow + Hooks
 // ===============================================
 // const ToggleButton = () => {
-//   const { toggleButton } = useContext(_createContext);
+//   const { toggleButton } = useContext(CreateContext);
 //   return <Button onClick={toggleButton}>Toggle Theme</Button>;
 // };
 // export default ToggleButton;

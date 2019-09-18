@@ -1,10 +1,10 @@
 import React, { Component, useContext } from 'react'
-import UserContext from './Context'
-import { ProductConsumer } from './Context'
 import Button from '@material-ui/core/Button'
+import UserContext, { ProductConsumer } from './Context'
 
 export default class ContextConsumerClass extends Component {
   static contextType = UserContext
+
   componentDidMount() {
     const user = this.context
     console.log(user)
