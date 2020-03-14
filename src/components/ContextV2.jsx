@@ -1,8 +1,8 @@
 import React from 'react'
-import BookList from './ContextV2/BookList'
-import Navbar from './ContextV2/Navbar'
-import { ContextProvider } from './ContextV2/_context'
 import ToggleButton from './ContextV2/ToggleButton'
+import Navbar from './ContextV2/Navbar'
+import BookList from './ContextV2/BookList'
+import { ContextProvider } from './ContextV2/_context'
 
 export default function Context() {
   return (

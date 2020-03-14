@@ -1,10 +1,10 @@
-import React from 'react'
+import React, { useState, createContext } from 'react'
 import PropTypes from 'prop-types'
 
-export const CartContext = React.createContext(null)
+export const CartContext = createContext(null)
 
 export const CartProvider = ({ children }) => {
-  const [cartTotal, setCartTotal] = React.useState(0)
+  const [cartTotal, setCartTotal] = useState(0)
   const incrementCartTotal = () => setCartTotal(cartTotal + 1)
 
   return (

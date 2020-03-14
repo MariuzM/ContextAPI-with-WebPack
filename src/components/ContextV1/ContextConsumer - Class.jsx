@@ -1,8 +1,9 @@
-import React, { Component, useContext } from 'react'
+import React from 'react'
 import Button from '@material-ui/core/Button'
 import UserContext, { ProductConsumer } from './Context'
 
-export default class ContextConsumerClass extends Component {
+export default class ContextConsumerClass extends React.Component {
+  // eslint-disable-next-line react/static-property-placement
   static contextType = UserContext
 
   componentDidMount() {
